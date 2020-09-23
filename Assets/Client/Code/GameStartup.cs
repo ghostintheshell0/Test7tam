@@ -28,6 +28,7 @@ namespace Test7tam
 
 			_systems
 				.Add(new SpawnPlayerSystem())
+				.Add(new MovingSystem())
                 .Init ();
         }
 
