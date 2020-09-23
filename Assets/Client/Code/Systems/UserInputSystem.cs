@@ -17,6 +17,7 @@ namespace Test7tam
 			{
 				ref var ent = ref _filter.GetEntity(i);
 				ref var movingData = ref ent.Get<MovingComponent>();
+
 				movingData.Direction = direction;
 			}
 

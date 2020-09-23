@@ -31,6 +31,10 @@ namespace Test7tam
 				.Add(new SpawnPlayerSystem())
 				.Add(new MovingSystem())
 				.Add(new UserInputSystem())
+				.Add(new SpawnBombSystem())
+
+				.OneFrame<SpawnBombCommand>()
+
                 .Init ();
         }
 

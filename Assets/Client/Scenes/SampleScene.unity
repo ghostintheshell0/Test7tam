@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 153378058}
   - component: {fileID: 153378057}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BombIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,6 +322,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153378055}
   m_CullTransparentMesh: 0
+--- !u!1 &192457981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 192457982}
+  m_Layer: 0
+  m_Name: WorldOffset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &192457982
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192457981}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.21, y: -2.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &201991291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -435,8 +465,9 @@ GameObject:
   - component: {fileID: 345021031}
   - component: {fileID: 345021030}
   - component: {fileID: 345021029}
+  - component: {fileID: 345021032}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BombButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,7 +535,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 345021030}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 345021032}
+        m_TargetAssemblyTypeName: Test7tam.BombButton, Assembly-CSharp
+        m_MethodName: Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &345021030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,6 +586,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345021027}
   m_CullTransparentMesh: 0
+--- !u!114 &345021032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345021027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0224f46da57cf642994f9c7987174e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &351302662
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,6 +706,8 @@ MonoBehaviour:
   Joystick: {fileID: 1450267921}
   MapAngle: {x: 0, y: 15}
   MapSize: {x: 17, y: 9}
+  CellSize: {x: 0.57, y: 0.55, z: 0}
+  WorldOffset: {fileID: 192457982}
 --- !u!114 &390656350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2212,7 +2269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1381153023
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2272,7 +2329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381153022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.09, z: 0}
+  m_LocalPosition: {x: -0.07, y: 2.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2437,7 +2494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1613175683
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3193,7 +3250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5147063183445805263, guid: e476e8bc332b7c643a37e3917199f773, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.23
+      value: -2.21
       objectReference: {fileID: 0}
     - target: {fileID: 5147063183445805263, guid: e476e8bc332b7c643a37e3917199f773, type: 3}
       propertyPath: m_LocalPosition.z
