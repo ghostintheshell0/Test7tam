@@ -27,17 +27,7 @@ namespace Test7tam
 			Service<EcsWorld>.Set(_world);
 
 			_systems
-                // register your systems here, for example:
-                // .Add (new TestSystem1 ())
-                // .Add (new TestSystem2 ())
-                
-                // register one-frame components (order is important), for example:
-                // .OneFrame<TestComponent1> ()
-                // .OneFrame<TestComponent2> ()
-                
-                // inject service instances here (order doesn't important), for example:
-                // .Inject (new CameraService ())
-                // .Inject (new NavMeshSupport ())
+				.Add(new SpawnPlayerSystem())
                 .Init ();
         }
 
