@@ -10,6 +10,8 @@ namespace Test7tam
 			var playerEnt = Service<EcsWorld>.Get().NewEntity();
 			ref var playerData = ref playerEnt.Get<PlayerComponent>();
 			playerData.View = Service<LevelData>.Get().Player;
+
+			playerEnt.Get<ControllableComponent>();
 		}
 	}
 }
