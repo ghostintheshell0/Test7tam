@@ -1,0 +1,11 @@
+/Library/
+/Temp/
+*.CSharp.csproj
+*.csproj
+*.sln
+/.vs/
+/.idea/
+/obj/
+/.vscode/
+/Logs/
+/.gradle/
