@@ -98,9 +98,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.2}
+  m_Offset: {x: 0, y: 0.15}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.18
 --- !u!50 &1730666580054341338
 Rigidbody2D:
   serializedVersion: 4
@@ -135,5 +135,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1
-  BombTemplate: {fileID: 4720477577836429899, guid: 87d4d8d713a0bdf42af8a5e8d249d877, type: 3}
+  BombTemplate: {fileID: -9122535936122601710, guid: 87d4d8d713a0bdf42af8a5e8d249d877, type: 3}
   Body: {fileID: 1730666580054341338}

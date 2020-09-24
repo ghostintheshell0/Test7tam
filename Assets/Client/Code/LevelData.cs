@@ -12,6 +12,7 @@ namespace Test7tam
 		public Vector2Int MapSize;
 		public Vector3 CellSize;
 		public Transform WorldOffset;
+		public LayerMask WallsMask;
 
 		public Vector3 MapToWorld(Vector2Int mapPos)
 		{

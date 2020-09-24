@@ -25,6 +25,7 @@ namespace Test7tam
 
 			Service<LevelData>.Set(_levelData);
 			Service<EcsWorld>.Set(_world);
+			Service<MapData>.Set(new MapData());
 
 
 			_systems
@@ -40,15 +41,16 @@ namespace Test7tam
 
         private void Update ()
 		{
-            _systems?.Run ();
+            _systems?.Run();
         }
 
         private void OnDestroy ()
 		{
-            if (_systems != null) {
-                _systems.Destroy ();
+            if (_systems != null)
+			{
+                _systems.Destroy();
                 _systems = null;
-                _world.Destroy ();
+                _world.Destroy();
                 _world = null;
             }
         }

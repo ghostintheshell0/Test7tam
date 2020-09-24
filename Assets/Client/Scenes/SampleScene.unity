@@ -608,7 +608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 351302663}
   - component: {fileID: 351302664}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -709,6 +709,9 @@ MonoBehaviour:
   MapSize: {x: 17, y: 9}
   CellSize: {x: 0.565, y: 0.5, z: 0}
   WorldOffset: {fileID: 192457982}
+  WallsMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &390656350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1975,7 +1978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1256636623
 Transform:
   m_ObjectHideFlags: 0
@@ -2286,7 +2289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1381153023
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2445,7 +2448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1589359981}
   - component: {fileID: 1589359982}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BottomBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2511,7 +2514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1613175683
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2778,7 +2781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1889587224}
   - component: {fileID: 1889587225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2838,7 +2841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1918696714}
   - component: {fileID: 1918696715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TopBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3263,7 +3266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133921494075784666, guid: e476e8bc332b7c643a37e3917199f773, type: 3}
       propertyPath: Speed
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5147063183445805263, guid: e476e8bc332b7c643a37e3917199f773, type: 3}
       propertyPath: m_LocalPosition.x
