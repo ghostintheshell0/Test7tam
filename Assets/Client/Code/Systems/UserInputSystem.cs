@@ -10,14 +10,17 @@ namespace Test7tam
 
 		public void Run()
 		{
-			var direction = Service<LevelData>.Get().Joystick.Direction;
+			var levelData = Service<LevelData>.Get();
+			var direction = levelData.Joystick.Direction;
 			if (direction.x == 0 && direction.y == 0) return;
 
-			foreach(var i in _filter)
+			direction = levelData.Incline(direction);
+
+			foreach (var i in _filter)
 			{
 				ref var ent = ref _filter.GetEntity(i);
 				ref var movingData = ref ent.Get<MovingComponent>();
-
+				
 				movingData.Direction = direction;
 			}
 
