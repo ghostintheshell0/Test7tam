@@ -21,8 +21,7 @@ namespace Test7tam
 				ref var bombData = ref bombEnt.Get<BombComponent>();
 				bombData.Position = Service<LevelData>.Get().WorldToMap(player.View.transform.position);
 				var bombPosition = Service<LevelData>.Get().MapToWorld(bombData.Position);
-				bombData.View = Object.Instantiate(player.View.BombTemplate, bombPosition, Quaternion.identity);
-				Debug.Log($"Bomb planted in {bombData.Position}");
+				bombData.View = ObjectPool.Spawn(player.View.BombTemplate, bombPosition, Quaternion.identity);
 			}
 		}
 	}
